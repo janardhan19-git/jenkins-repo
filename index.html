@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Haven - Hotel Dining</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gourmet Haven</h1>
+            <p>Premium Hotel Dining Experience</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#" class="active" data-section="home">Home</a></li>
+                <li><a href="#" data-section="menus">Menus</a></li>
+                <li><a href="#" data-section="order">Order</a></li>
+                <li><a href="#" data-section="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h2>Delicious Food Delivered to Your Room</h2>
+                <p>Experience the finest hotel dining without leaving your comfort</p>
+                <button class="btn order-now" data-section="order">Order Now</button>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Service</h3>
+                    <p>Order anytime, day or night</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-star"></i>
+                    <h3>Premium Quality</h3>
+                    <p>Chef-prepared meals</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>To your room in 30 minutes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menus Section -->
+        <section id="menus" class="section">
+            <h2>Our Menus</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="breakfast">Breakfast</button>
+                <button class="tab-btn" data-category="lunch">Lunch</button>
+                <button class="tab-btn" data-category="dinner">Dinner</button>
+                <button class="tab-btn" data-category="desserts">Desserts</button>
+                <button class="tab-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <div class="menu-items">
+                <!-- Breakfast Items -->
+                <div class="menu-category active" id="breakfast">
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e" alt="Continental Breakfast">
+                        <div class="item-details">
+                            <h3>Continental Breakfast</h3>
+                            <p>Fresh croissants, assorted jams, butter, orange juice, and coffee</p>
+                            <span class="price">$12.99</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929" alt="American Breakfast">
+                        <div class="item-details">
+                            <h3>American Breakfast</h3>
+                            <p>Scrambled eggs, crispy bacon, toast, hash browns, and coffee</p>
+                            <span class="price">$15.99</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Healthy Breakfast">
+                        <div class="item-details">
+                            <h3>Healthy Breakfast</h3>
+                            <p>Greek yogurt with granola, fresh fruits, honey, and green tea</p>
+                            <span class="price">$11.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch Items -->
+                <div class="menu-category" id="lunch">
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f" alt="Club Sandwich">
+                        <div class="item-details">
+                            <h3>Club Sandwich</h3>
+                            <p>Triple-decker with turkey, bacon, lettuce, tomato, and mayo</p>
+                            <span class="price">$14.99</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Caesar Salad">
+                        <div class="item-details">
+                            <h3>Caesar Salad</h3>
+                            <p>Fresh romaine, croutons, parmesan, and our signature dressing</p>
+                            <span class="price">$13.99</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Margherita Pizza">
+                        <div class="item-details">
+                            <h3>Margherita Pizza</h3>
+                            <p>Classic pizza with tomato sauce, mozzarella, and basil</p>
+                            <span class="price">$16.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More categories would go here -->
+                <!-- For brevity, I've included just breakfast and lunch -->
+                <!-- In a full implementation, you'd add dinner, desserts, drinks -->
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section id="order" class="section">
+            <h2>Place Your Order</h2>
+            
+            <div class="order-steps">
+                <div class="step active" data-step="1">
+                    <span>1</span>
+                    <p>Your Details</p>
+                </div>
+                <div class="step" data-step="2">
+                    <span>2</span>
+                    <p>Select Items</p>
+                </div>
+                <div class="step" data-step="3">
+                    <span>3</span>
+                    <p>Confirmation</p>
+                </div>
+            </div>
+
+            <div class="step-content">
+                <!-- Step 1: User Details -->
+                <div class="step-panel active" data-step="1">
+                    <form id="user-details">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="room">Room Number</label>
+                            <input type="text" id="room" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Delivery Time</label>
+                            <input type="time" id="time" required>
+                        </div>
+                        <button type="button" class="btn next-step" data-next="2">Continue to Menu</button>
+                    </form>
+                </div>
+
+                <!-- Step 2: Order Items -->
+                <div class="step-panel" data-step="2">
+                    <div class="order-instructions">
+                        <p>Select items from our menu. Click on an item to add it to your order.</p>
+                    </div>
+                    
+                    <div class="order-menu-tabs">
+                        <button class="tab-btn active" data-category="breakfast">Breakfast</button>
+                        <button class="tab-btn" data-category="lunch">Lunch</button>
+                        <button class="tab-btn" data-category="dinner">Dinner</button>
+                    </div>
+
+                    <div class="order-items">
+                        <!-- Breakfast items for ordering -->
+                        <div class="order-category active" id="order-breakfast">
+                            <div class="order-item" data-id="1" data-name="Continental Breakfast" data-price="12.99">
+                                <h3>Continental Breakfast</h3>
+                                <span class="price">$12.99</span>
+                                <button class="btn add-to-order">Add</button>
+                            </div>
+                            <div class="order-item" data-id="2" data-name="American Breakfast" data-price="15.99">
+                                <h3>American Breakfast</h3>
+                                <span class="price">$15.99</span>
+                                <button class="btn add-to-order">Add</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Lunch items for ordering -->
+                        <div class="order-category" id="order-lunch">
+                            <div class="order-item" data-id="3" data-name="Club Sandwich" data-price="14.99">
+                                <h3>Club Sandwich</h3>
+                                <span class="price">$14.99</span>
+                                <button class="btn add-to-order">Add</button>
+                            </div>
+                            <div class="order-item" data-id="4" data-name="Caesar Salad" data-price="13.99">
+                                <h3>Caesar Salad</h3>
+                                <span class="price">$13.99</span>
+                                <button class="btn add-to-order">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <h3>Your Order</h3>
+                        <div class="order-items-list">
+                            <!-- Items will be added here dynamically -->
+                            <p class="empty-message">No items selected yet</p>
+                        </div>
+                        <div class="order-total">
+                            <strong>Total: $<span id="total-amount">0.00</span></strong>
+                        </div>
+                        <button type="button" class="btn next-step" data-next="3">Continue to Confirmation</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Confirmation -->
+                <div class="step-panel" data-step="3">
+                    <div class="confirmation-details">
+                        <h3>Please confirm your order</h3>
+                        <div id="confirm-user-details">
+                            <!-- User details will be inserted here -->
+                        </div>
+                        <div id="confirm-order-items">
+                            <!-- Order items will be inserted here -->
+                        </div>
+                        <div class="confirm-total">
+                            <strong>Total: $<span id="confirm-total">0.00</span></strong>
+                        </div>
+                    </div>
+                    <div class="confirmation-actions">
+                        <button type="button" class="btn back-step" data-prev="2">Back</button>
+                        <button type="button" class="btn submit-order">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>dining@gourmethaven.com</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>123 Luxury Avenue, Hotel Floor 5</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Gourmet Haven Hotel Dining. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="order-success">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Your food will be delivered to your room shortly.</p>
+            <p>Thank you for choosing Gourmet Haven.</p>
+            <button class="btn close-modal-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
